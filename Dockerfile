@@ -10,10 +10,10 @@ CMD java -jar /app/app.jar
 
 
 #2、制作镜像
- #docker build -t sp-hm .
+ #docker build -t test .
  #
  ##将app.jar映射到/root/ancen/sp/huoma.jar文件，将日志文件/logger/映射到/root/ancen/sp/logger下
- #docker run --name sp-hm -d -p 8081:8081 -v /root/ancen/sp/huoma.jar:/app.jar/ -v /root/ancen/sp/logger:/logger/ sp-hm
+ #docker run --name test -d -p 8081:8081 -v /root/ancen/sp/huoma.jar:/app.jar/ -v /root/ancen/sp/logger:/logger/ test
  #
  #cat 查看文件记事本
  #
