@@ -1,6 +1,7 @@
 package com.example.linuxdemo.controller;
 
 import com.example.linuxdemo.utils.TestLinux;
+import com.example.linuxdemo.utils.TestStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -29,6 +30,12 @@ public class TestLinuxController {
                 }
             }
         }
+        return "index";
+    }
+    @RequestMapping("/testLinux2")
+    public String testLinux2(@RequestParam("cmd") String cmd) {
+        System.out.println("cmd命令" + cmd);
+        TestStream.runCmdForResult(cmd);
         return "index";
     }
 }
